@@ -10,6 +10,8 @@ const StyledHeader = styled.div<{ $hiddenBack: boolean; $align: HeaderAlignment 
   display: flex;
   justify-content: ${({ $hiddenBack, $align }) => (!$hiddenBack ? 'space-between' : ATTR_BY_HEADER_ALIGN[$align])};
   align-items: center;
+  height: 60px;
+  padding: 0 30px;
 
   .header__back_icon_wrap {
     display: ${({ $hiddenBack }) => ($hiddenBack ? 'none' : 'flex')};

@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-const StyledLogin = styled.div``;
+import FullScreen from '@@components/FullScreen';
+
+const StyledLogin = styled(FullScreen)``;
 
 function Login() {
   return <StyledLogin></StyledLogin>;
