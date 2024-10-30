@@ -34,7 +34,7 @@ const CONFIG_LIST: ConfigItem[] = [
 
 function My() {
   return (
-    <StyledMy>
+    <StyledMy navigation>
       <Header />
       <Flex.Vertical className='body'>
         <MyInfoCard />

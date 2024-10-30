@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
-const FullScreen = styled.div`
-  display: flex;
-  flex-direction: column;
+import Flex from '@@components/Flex';
+import { FullScreenProps } from '@@components/FullScreen/types';
+import NavigationBar from '@@components/NavigationBar';
+
+const StyledFullScreen = styled(Flex.Vertical)`
   height: 100vh;
 
   .body {
@@ -11,5 +13,14 @@ const FullScreen = styled.div`
     overflow-y: scroll;
   }
 `;
+
+function FullScreen({ children, navigation, ...props }: FullScreenProps) {
+  return (
+    <StyledFullScreen {...props}>
+      {children}
+      {!!navigation && <NavigationBar />}
+    </StyledFullScreen>
+  );
+}
 
 export default FullScreen;
