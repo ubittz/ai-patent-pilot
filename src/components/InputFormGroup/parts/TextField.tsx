@@ -6,7 +6,7 @@ const TextField = styled.input`
   height: 42px;
   outline: none;
   border: none;
-  border-bottom: 1px solid ${COLORS.GRAY_SCALE_300};
+  border-bottom: 1px solid ${COLORS.GRAY_SCALE_050};
 
   font-size: 14px;
   font-weight: 400;
@@ -16,6 +16,10 @@ const TextField = styled.input`
 
   &::placeholder {
     color: ${COLORS.GRAY_SCALE_500};
+  }
+
+  &:read-only {
+    background: ${COLORS.GRAY_SCALE_050};
   }
 `;
 
