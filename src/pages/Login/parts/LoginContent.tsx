@@ -48,6 +48,7 @@ function LoginContent() {
             label='비밀번호'
             inputProps={{
               ...getFieldProps('password'),
+              type: 'password',
               placeholder: '비밀번호를 입력하세요.',
             }}
           />
