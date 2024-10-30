@@ -7,11 +7,11 @@ import Typography from '@@components/Typography';
 
 const StyledInputFormGroup = styled(Flex.Vertical)``;
 
-function InputFormGroup({ label, ...props }: InputFormGroupProps) {
+function InputFormGroup({ label, inputProps, ...props }: InputFormGroupProps) {
   return (
-    <StyledInputFormGroup gap={2}>
+    <StyledInputFormGroup gap={2} {...props}>
       <Typography.Caption>{label}</Typography.Caption>
-      <TextField {...props} />
+      <TextField {...inputProps} />
     </StyledInputFormGroup>
   );
 }

@@ -1,5 +1,8 @@
 import { InputHTMLAttributes } from 'react';
 
-export interface InputFormGroupProps extends InputHTMLAttributes<HTMLInputElement> {
+import { FlexProps } from '@@components/Flex/types';
+
+export interface InputFormGroupProps extends FlexProps {
   label?: string;
+  inputProps: InputHTMLAttributes<HTMLInputElement>;
 }
