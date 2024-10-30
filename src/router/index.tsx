@@ -5,6 +5,7 @@ import Home from '@@pages/Home';
 import Login from '@@pages/Login';
 import Main from '@@pages/Main';
 import My from '@@pages/My';
+import UpdateMyInfo from '@@pages/My/UpdateMyInfo';
 import Register from '@@pages/Register';
 import Account from '@@pages/Register/Account';
 import { PAGES, ROUTE_PREFIX } from '@@router/constants';
@@ -20,6 +21,7 @@ function Router() {
       <Route path={pathGenerator(`${PAGES.REGISTER}/account`)} element={<Account />} />
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
       <Route path={pathGenerator(PAGES.MY)} element={<My />} />
+      <Route path={pathGenerator(`${PAGES.MY}/update`)} element={<UpdateMyInfo />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );

@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
@@ -17,8 +18,14 @@ const StyledMyInfoConfigItem = styled(Flex.Horizontal)`
 `;
 
 function MyInfoConfigItem({ item }: { item: ConfigItem }) {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(item.path);
+  };
+
   return (
-    <StyledMyInfoConfigItem className='my_info_config__item' alignItems='center' gap={8}>
+    <StyledMyInfoConfigItem className='my_info_config__item' alignItems='center' gap={8} onClick={handleClick}>
       <Flex.Horizontal className='my_info_config__item_icon' alignItems='center' justifyContent='center'>
         {item.icon}
       </Flex.Horizontal>

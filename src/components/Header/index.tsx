@@ -25,7 +25,7 @@ const StyledHeader = styled.div<{ $hiddenBack: boolean; $align: HeaderAlignment 
   }
 
   .header__blank_box {
-    display: ${({ $hiddenBack }) => ($hiddenBack ? 'none' : 'flex')};
+    display: ${({ $hiddenBack }) => ($hiddenBack ? 'none' : 'block')};
     width: ${BUTTON_SIZE}px;
   }
 `;
