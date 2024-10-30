@@ -8,6 +8,7 @@ const FullScreen = styled.div`
   .body {
     flex: 1;
     flex-direction: column;
+    overflow-y: scroll;
   }
 `;
 
