@@ -1,6 +1,4 @@
-import { SVGAttributes } from 'react';
-
-type DefaultIconProps = SVGAttributes<SVGSVGElement>;
+import { DefaultIconProps } from '@@types/common';
 
 export function ArrowLeftIcon(props: DefaultIconProps) {
   return (

@@ -5,4 +5,5 @@ export const PAGES = {
   LOGIN: '/login',
   REGISTER: '/register',
   HOME: '/home',
+  MY: '/my',
 } as const;
