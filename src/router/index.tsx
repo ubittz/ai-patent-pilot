@@ -8,6 +8,8 @@ import My from '@@pages/My';
 import PurchaseTicket from '@@pages/PurchaseTicket';
 import Register from '@@pages/Register';
 import Account from '@@pages/Register/Account';
+import ServiceHistory from '@@pages/ServiceHistory';
+import ServiceHistoryDetail from '@@pages/ServiceHistory/Detail';
 import UpdateMyInfo from '@@pages/UpdateMyInfo';
 import { PAGES, ROUTE_PREFIX } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
@@ -24,6 +26,8 @@ function Router() {
       <Route path={pathGenerator(PAGES.MY)} element={<My />} />
       <Route path={pathGenerator(`${PAGES.MY}/update`)} element={<UpdateMyInfo />} />
       <Route path={pathGenerator(`${PAGES.MY}/purchase-ticket`)} element={<PurchaseTicket />} />
+      <Route path={pathGenerator(`${PAGES.MY}/service-history`)} element={<ServiceHistory />} />
+      <Route path={pathGenerator(`${PAGES.MY}/service-history/:id`)} element={<ServiceHistoryDetail />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );
