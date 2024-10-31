@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
-import { COLORS } from '@@constants/colors';
 import { ConfigItem } from '@@pages/My/types';
 
 const StyledMyInfoConfigItem = styled(Flex.Horizontal)`
@@ -13,7 +12,7 @@ const StyledMyInfoConfigItem = styled(Flex.Horizontal)`
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: ${COLORS.GRAY_SCALE_050};
+    background: #f9f9f9;
   }
 `;
 
@@ -29,7 +28,7 @@ function MyInfoConfigItem({ item }: { item: ConfigItem }) {
       <Flex.Horizontal className='my_info_config__item_icon' alignItems='center' justifyContent='center'>
         {item.icon}
       </Flex.Horizontal>
-      <Typography.MediumBody>{item.title}</Typography.MediumBody>
+      <Typography.Header4 fontWeight={400}>{item.title}</Typography.Header4>
     </StyledMyInfoConfigItem>
   );
 }

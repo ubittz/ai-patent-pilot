@@ -15,15 +15,15 @@ const StyledMyInfoCard = styled(Flex.Vertical)`
 
   .my_info_card__ticket {
     border-radius: 16px;
-    border: 1px solid ${COLORS.GRAY_SCALE_050};
+    border: 1px solid ${COLORS.LINE};
     overflow: hidden;
-    background: ${COLORS.GRAY_SCALE_000};
+    background: ${COLORS.WHITE_TEXT};
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
 
     .my_info_card__ticket_top {
       padding: 20px 12px;
       padding-right: 16px;
-      border-bottom: 1px solid ${COLORS.GRAY_SCALE_050};
+      border-bottom: 1px solid ${COLORS.LINE};
     }
 
     .my_info_card__ticket_bottom {
@@ -46,16 +46,21 @@ function MyInfoCard() {
   return (
     <StyledMyInfoCard gap={16}>
       <Flex.Horizontal justifyContent='space-between' alignItems='center'>
-        <Typography.LargeTitle>안녕하세요, 김준수님!</Typography.LargeTitle>
-        <Typography.Caption>Logout</Typography.Caption>
+        <Typography.Header2>안녕하세요, 김준수님!</Typography.Header2>
+        <Typography.Header6 color={COLORS.PLACEHOLDER}>Logout</Typography.Header6>
       </Flex.Horizontal>
       <Flex.Vertical className='my_info_card__ticket'>
         <Flex.Horizontal className='my_info_card__ticket_top' justifyContent='space-between'>
-          <Typography.MediumSubtitle>보유 이용권</Typography.MediumSubtitle>
-          <Typography.MediumBody>N개</Typography.MediumBody>
+          <Typography.Header5>보유 이용권</Typography.Header5>
+          <Typography.Header5>
+            <Typography.Header5 as='span' color={COLORS.MAIN_GREEN}>
+              N
+            </Typography.Header5>
+            개
+          </Typography.Header5>
         </Flex.Horizontal>
         <Flex.Horizontal className='my_info_card__ticket_bottom' justifyContent='flex-end'>
-          <Button.Small onClick={handleClickPurchase}>이용권 구매</Button.Small>
+          <Button.Tiny onClick={handleClickPurchase}>이용권 구매</Button.Tiny>
         </Flex.Horizontal>
       </Flex.Vertical>
     </StyledMyInfoCard>

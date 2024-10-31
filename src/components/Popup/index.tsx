@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
+import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 
 import { PopupProps } from './types';
@@ -28,7 +29,7 @@ const StyledPopup = styled.div<{ $visible: boolean }>`
     height: 195px;
     padding: 20px 0;
 
-    background: ${COLORS.GRAY_SCALE_000};
+    background: ${COLORS.WHITE_TEXT};
     border-radius: 12px;
 
     .popup_box__content {
@@ -46,10 +47,12 @@ function Popup({ visible, content, confirmText = '확인', onConfirm }: PopupPro
   return (
     <StyledPopup $visible={visible}>
       <Flex.Vertical className='popup_box' alignItems='center'>
-        <div className='popup_box__content'>{content}</div>
-        <Button.Medium className='popup_box__button' onClick={onConfirm}>
+        <Typography.Header4 className='popup_box__content' fontWeight={400}>
+          {content}
+        </Typography.Header4>
+        <Button.Small className='popup_box__button' onClick={onConfirm}>
           {confirmText}
-        </Button.Medium>
+        </Button.Small>
       </Flex.Vertical>
     </StyledPopup>
   );

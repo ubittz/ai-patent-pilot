@@ -13,8 +13,8 @@ const StyledRadio = styled.label`
     width: 20px;
     height: 20px;
 
-    background: ${COLORS.GRAY_SCALE_000};
-    border: 1px solid ${COLORS.GRAY_SCALE_050};
+    background: ${COLORS.WHITE_TEXT};
+    border: 1px solid ${COLORS.LINE};
     border-radius: 50%;
 
     &::before {
@@ -23,7 +23,7 @@ const StyledRadio = styled.label`
   }
 
   & > input:checked + .radio__icon {
-    background: ${COLORS.MAIN_400};
+    background: ${COLORS.SUB_GREEN};
     border: none;
 
     &::before {
@@ -36,7 +36,7 @@ const StyledRadio = styled.label`
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: ${COLORS.GRAY_SCALE_000};
+      background: ${COLORS.WHITE_TEXT};
 
       transform: translateX(-50%) translateY(-50%);
     }

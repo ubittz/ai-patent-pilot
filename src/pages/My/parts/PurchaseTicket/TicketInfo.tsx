@@ -14,7 +14,7 @@ const StyledTicketInfo = styled(Flex.Vertical)`
 function TicketInfo() {
   return (
     <StyledTicketInfo gap={30}>
-      <Typography.LargeTitle>이용권 구매를 원하시나요?</Typography.LargeTitle>
+      <Typography.Header2>이용권 구매를 원하시나요?</Typography.Header2>
       <TicketList />
     </StyledTicketInfo>
   );

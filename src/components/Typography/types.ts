@@ -8,6 +8,7 @@ import { asType } from '@@types/common';
 export interface TypographyProps extends HTMLAttributes<HTMLParagraphElement> {
   as?: SupportedHTMLElements;
   color?: string;
+  fontWeight?: number;
 }
 
 export type TypographyTheme = asType<typeof TYPOGRAPHY_THEME>;

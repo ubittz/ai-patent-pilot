@@ -30,7 +30,7 @@ function PurchaseTicketContent() {
     <Form>
       <StyledPurchaseTicketContent>
         <Header onBack={handleClickBack}>
-          <Typography.MediumTitle>이용권 구매</Typography.MediumTitle>
+          <Typography.Header4>이용권 구매</Typography.Header4>
         </Header>
         <Flex.Vertical className='body'>
           <TicketInfo />

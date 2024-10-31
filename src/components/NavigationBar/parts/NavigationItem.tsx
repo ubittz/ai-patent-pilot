@@ -34,7 +34,7 @@ function NavigationItem({ item }: { item: NavigationItemType }) {
           <Flex.Horizontal justifyContent='center' alignItems='center' className='navigation_item__icon'>
             {isActive ? item.activeIcon : item.inactiveIcon}
           </Flex.Horizontal>
-          <Typography.Caption color={isActive ? COLORS.GRAY_SCALE_800 : COLORS.GRAY_SCALE_200}>{item.title}</Typography.Caption>
+          <Typography.Header6 color={isActive ? COLORS.MAIN_TEXT : COLORS.PLACEHOLDER}>{item.title}</Typography.Header6>
         </>
       )}
     </StyledNavigationItem>

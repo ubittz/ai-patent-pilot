@@ -6,20 +6,20 @@ const TextField = styled.input`
   height: 42px;
   outline: none;
   border: none;
-  border-bottom: 1px solid ${COLORS.GRAY_SCALE_050};
+  border-bottom: 1px solid ${COLORS.LINE};
 
   font-size: 14px;
   font-weight: 400;
   line-height: 18.2px;
 
-  color: ${COLORS.GRAY_SCALE_800};
+  color: ${COLORS.MAIN_TEXT};
 
   &::placeholder {
-    color: ${COLORS.GRAY_SCALE_500};
+    color: ${COLORS.PLACEHOLDER};
   }
 
   &:read-only {
-    background: ${COLORS.GRAY_SCALE_050};
+    background: ${COLORS.LINE};
   }
 `;
 

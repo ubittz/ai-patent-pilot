@@ -12,7 +12,7 @@ const StyledPurchaseConsent = styled(Flex.Vertical)`
 function PurchaseConsent() {
   return (
     <StyledPurchaseConsent gap={30}>
-      <Typography.MediumTitle>이용 동의</Typography.MediumTitle>
+      <Typography.Header3>이용 동의</Typography.Header3>
       <Flex.Vertical gap={12}>
         <CheckBox>개인정보 수집 및 이용 동의(필수)</CheckBox>
         <CheckBox>이용약관 동의(필수)</CheckBox>

@@ -24,7 +24,7 @@ function PurchaseInfo() {
 
   return (
     <StyledPurchaseInfo gap={30}>
-      <Typography.MediumTitle>결제 정보</Typography.MediumTitle>
+      <Typography.Header3>결제 정보</Typography.Header3>
       <FormGroup label='결제 수단'>
         <Flex.Horizontal>
           <Flex.Horizontal gap={30} className='purchase_info__radio_box'>

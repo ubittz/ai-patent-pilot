@@ -42,14 +42,14 @@ function UpdateMyInfoContent() {
     <Form onSubmit={handleSubmit}>
       <StyledUpdateMyInfoContent>
         <Header onBack={handleBack}>
-          <Typography.MediumSubtitle>내 정보 수정</Typography.MediumSubtitle>
+          <Typography.Header4>내 정보 수정</Typography.Header4>
         </Header>
         <Flex.Vertical className='body' gap={30}>
-          <Typography.LargeTitle>
+          <Typography.Header2>
             새로운 정보가
             <br />
             있나요?
-          </Typography.LargeTitle>
+          </Typography.Header2>
           <InputFormGroup label='이름' inputProps={{ ...getFieldProps('name'), placeholder: '이름을 입력하세요.' }} />
           <InputFormGroup label='아이디' inputProps={{ ...getFieldProps('id'), placeholder: '이름을 입력하세요.', readOnly: true }} />
           <Flex.Vertical gap={8}>

@@ -20,7 +20,7 @@ const StyledFormGroup = styled(Flex.Vertical)`
 function FormGroup({ label, children, ...props }: FormGroupProps) {
   return (
     <StyledFormGroup gap={2} {...props}>
-      {label && <Typography.Caption>{label}</Typography.Caption>}
+      {label && <Typography.Header6>{label}</Typography.Header6>}
       {children}
     </StyledFormGroup>
   );

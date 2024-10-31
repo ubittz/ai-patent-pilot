@@ -10,7 +10,7 @@ const StyledDivider = styled(Flex.Horizontal)`
   .divider__bar {
     flex: 1;
     height: 1px;
-    background: ${COLORS.GRAY_SCALE_200};
+    background: ${COLORS.LINE};
   }
 
   .divider__text {
@@ -22,9 +22,9 @@ function Divider() {
   return (
     <StyledDivider gap={8} alignItems='center'>
       <div className='divider__bar' />
-      <Typography.SmallBody color={COLORS.GRAY_SCALE_600} className='divier__text'>
+      <Typography.Header6 color={COLORS.SUB_TEXT} className='divier__text'>
         또는
-      </Typography.SmallBody>
+      </Typography.Header6>
       <div className='divider__bar' />
     </StyledDivider>
   );

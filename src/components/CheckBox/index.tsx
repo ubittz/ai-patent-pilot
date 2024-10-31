@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { CheckIcon } from '@@components/CheckBox/icons';
 import { CheckBoxProps } from '@@components/CheckBox/types';
 import Flex from '@@components/Flex';
+import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 
 const StyledCheckBox = styled.label`
@@ -16,12 +17,12 @@ const StyledCheckBox = styled.label`
     width: 20px;
     height: 20px;
 
-    background: ${COLORS.GRAY_SCALE_050};
+    background: ${COLORS.LINE};
     border-radius: 4px;
   }
 
   & > input:checked + .checkbox__icon {
-    background: ${COLORS.MAIN_400};
+    background: ${COLORS.MAIN_GREEN};
   }
 `;
 
@@ -32,7 +33,9 @@ function CheckBox({ children, ...props }: CheckBoxProps) {
       <Flex.Horizontal className='checkbox__icon' alignItems='center' justifyContent='center'>
         <CheckIcon />
       </Flex.Horizontal>
-      {children}
+      <Typography.Header4 fontWeight={400} color={COLORS.SUB_TEXT}>
+        {children}
+      </Typography.Header4>
     </StyledCheckBox>
   );
 }

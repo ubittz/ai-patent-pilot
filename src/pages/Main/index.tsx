@@ -34,25 +34,25 @@ function Main() {
       <Header hiddenBack>AI 특허 파일럿</Header>
       <Flex.Vertical className='body'>
         <Flex.Horizontal className='main__top' flex={1} alignItems='center' gap={12}>
-          <Typography.LargeTitle className='main__title'>
+          <Typography.Header1>
             아이디어의 가치를
             <br />
             높이세요.
-          </Typography.LargeTitle>
+          </Typography.Header1>
         </Flex.Horizontal>
         <Flex.Vertical className='main__bottom' flex={1} gap={17}>
           <Flex.Vertical className='main__button_wrap' gap={12}>
             <Button.Large onClick={handleClickLogin}>로그인</Button.Large>
-            <Button.Large theme='secondary' onClick={handleClickRegister}>
+            <Button.Large theme='outline' onClick={handleClickRegister}>
               회원가입
             </Button.Large>
           </Flex.Vertical>
           <Divider />
           <SNSLogin />
           <Flex.Horizontal className='main__forgot_password' flex={1} alignItems='center'>
-            <Typography.SmallBody color={COLORS.GRAY_SCALE_500}>
-              ID/PW를 잃어버리셨나요? <Typography.SmallBody as='span'>ID/PW 찾기</Typography.SmallBody>
-            </Typography.SmallBody>
+            <Typography.Header6 color={COLORS.SUB_GREEN}>
+              ID/PW를 잃어버리셨나요? <Typography.Header6 as='span'>ID/PW 찾기</Typography.Header6>
+            </Typography.Header6>
           </Flex.Horizontal>
         </Flex.Vertical>
       </Flex.Vertical>

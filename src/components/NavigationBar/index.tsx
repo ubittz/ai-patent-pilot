@@ -19,7 +19,7 @@ import { pathGenerator } from '@@router/utils';
 
 const StyledNavigationBar = styled(Flex.Horizontal)`
   height: 66px;
-  border-top: 1px solid ${COLORS.GRAY_SCALE_050};
+  border-top: 1px solid ${COLORS.LINE};
 
   .navigation_item {
     flex: 1;

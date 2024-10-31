@@ -32,11 +32,11 @@ function LoginContent() {
       <StyledLoginContent>
         <Header onBack={handleClickBack} />
         <Flex.Vertical className='body' gap={30}>
-          <Typography.LargeTitle>
+          <Typography.Header2>
             반가워요!
             <br />
             다양한 서비스를 이용해보세요.
-          </Typography.LargeTitle>
+          </Typography.Header2>
           <InputFormGroup
             label='아이디'
             inputProps={{

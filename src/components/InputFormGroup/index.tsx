@@ -22,7 +22,7 @@ const StyledInputFormGroup = styled(Flex.Vertical)`
 function InputFormGroup({ label, inputProps, buttonProps, ...props }: InputFormGroupProps) {
   return (
     <StyledInputFormGroup gap={2} {...props}>
-      {label && <Typography.Caption>{label}</Typography.Caption>}
+      {label && <Typography.Header6>{label}</Typography.Header6>}
       <Flex.Horizontal className='input_form_group__input_wrap' gap={12}>
         <TextField {...inputProps} />
         {buttonProps && <Button.Medium {...buttonProps} />}

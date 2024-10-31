@@ -50,11 +50,11 @@ function RegisterContent() {
       <StyledRegisterContent>
         <Header onBack={handleClickBack} />
         <Flex.Vertical className='body' gap={30}>
-          <Typography.LargeTitle>
+          <Typography.Header2>
             가입하고 더 많은 기능을
             <br />
             만나보세요.
-          </Typography.LargeTitle>
+          </Typography.Header2>
           <InputFormGroup label='이름' inputProps={{ ...getFieldProps('name'), placeholder: '이름을 입력해주세요' }} />
           <InputFormGroup label='이메일' inputProps={{ ...getFieldProps('email'), placeholder: '이메일을 입력해주세요' }} />
           <Flex.Horizontal className='register__phone_wrap' alignItems='flex-end' gap={12}>
@@ -62,10 +62,13 @@ function RegisterContent() {
               className='register__phone_input'
               label='연락처'
               inputProps={{ ...getFieldProps('phone'), readOnly: isRequestVerify, placeholder: `'-'를 빼고 입력해주세요` }}
+              buttonProps={{
+                children: '인증하기',
+                type: 'button',
+                disabled: isRequestVerify || !values.phone,
+                onClick: handleClickVerify,
+              }}
             />
-            <Button.Medium className='register__phone_button' type='button' disabled={isRequestVerify || !values.phone} onClick={handleClickVerify}>
-              인증하기
-            </Button.Medium>
           </Flex.Horizontal>
           <InputFormGroup
             label='인증번호'

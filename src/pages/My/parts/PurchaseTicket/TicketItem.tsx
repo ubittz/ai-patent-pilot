@@ -11,15 +11,15 @@ const StyledTicketItem = styled(Flex.Horizontal)<{ $selected: boolean }>`
   height: 70px;
   border-radius: 12px;
 
-  background: ${({ $selected }) => ($selected ? COLORS.MAIN_400 : COLORS.GRAY_SCALE_000)};
+  background: ${({ $selected }) => ($selected ? COLORS.MAIN_GREEN : COLORS.WHITE_TEXT)};
   border: 1px solid;
-  border-color: ${({ $selected }) => ($selected ? COLORS.MAIN_400 : COLORS.GRAY_SCALE_050)};
+  border-color: ${({ $selected }) => ($selected ? COLORS.MAIN_GREEN : COLORS.LINE)};
 
   .ticket_item__icon {
     width: 36px;
     height: 36px;
 
-    background: ${({ $selected }) => ($selected ? COLORS.GRAY_SCALE_000 : COLORS.GRAY_SCALE_050)};
+    background: ${({ $selected }) => ($selected ? COLORS.WHITE_TEXT : '#F9F9F9')};
     border-radius: 50%;
   }
 `;
@@ -37,11 +37,13 @@ function TicketItem({ type, selected, onClick }: TicketItemProps) {
         <Flex.Horizontal className='ticket_item__icon' justifyContent='center' alignItems='center'>
           <Icon selected={selected} />
         </Flex.Horizontal>
-        <Typography.SmallBody color={selected ? COLORS.GRAY_SCALE_000 : COLORS.GRAY_SCALE_900}>{TICKET_TYPE_STRING[type]}</Typography.SmallBody>
+        <Typography.Header4 fontWeight={400} color={selected ? COLORS.WHITE_TEXT : COLORS.MAIN_TEXT}>
+          {TICKET_TYPE_STRING[type]}
+        </Typography.Header4>
       </Flex.Horizontal>
-      <Typography.SmallBody color={selected ? COLORS.GRAY_SCALE_000 : COLORS.GRAY_SCALE_900}>
+      <Typography.Header4 fontWeight={400} color={selected ? COLORS.WHITE_TEXT : COLORS.MAIN_TEXT}>
         {TICKET_TYPE_PRICE[type].toLocaleString()}원
-      </Typography.SmallBody>
+      </Typography.Header4>
     </StyledTicketItem>
   );
 }

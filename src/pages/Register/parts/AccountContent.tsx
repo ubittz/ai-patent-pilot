@@ -40,11 +40,11 @@ function AccountContent() {
       <StyledAccountContent>
         <Header onBack={handleClickBack} />
         <Flex.Vertical className='body' gap={30}>
-          <Typography.LargeTitle>
+          <Typography.Header2>
             가입하고 더 많은 기능을
             <br />
             만나보세요.
-          </Typography.LargeTitle>
+          </Typography.Header2>
           <InputFormGroup
             label='아이디'
             inputProps={{ ...getFieldProps('id'), placeholder: '아이디를 입력하세요.' }}

@@ -15,9 +15,13 @@ declare module 'styled-components' {
     typography: Record<TypographyTheme, string>;
     color: {
       defualtFontColor: string;
-      main_050: string;
-      main_400: string;
-      main_700: string;
+      main_text: string;
+      main_green: string;
+      white_text: string;
+      sub_text: string;
+      sub_green: string;
+      placeholder: string;
+      line: string;
     };
   }
 }
