@@ -7,6 +7,10 @@ const StyledBasicButton = styled.button<{ $size: ButtonSize; $theme: ButtonTheme
   border-radius: 100px;
   ${({ theme, $size }) => theme.button.size[$size]}
   ${({ theme, $theme }) => theme.button.theme[$theme]}
+  
+  &:disabled {
+    opacity: 0.6;
+  }
 `;
 
 const BasicButton =

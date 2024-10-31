@@ -28,7 +28,7 @@ const StyledUpdateMyInfoContent = styled(FullScreen)`
 function UpdateMyInfoContent() {
   const navigate = useNavigate();
 
-  const { getFieldProps, handleSubmit, setFieldValue } = useFormikContext<UpdateMyInfoForm>();
+  const { values, getFieldProps, handleSubmit, setFieldValue } = useFormikContext<UpdateMyInfoForm>();
 
   const handleBack = () => {
     navigate(-1);
@@ -61,6 +61,8 @@ function UpdateMyInfoContent() {
             inputProps={{ ...getFieldProps('phone'), placeholder: "'-'를 빼고 입력하세요." }}
             buttonProps={{
               children: '인증하기',
+              type: 'button',
+              disabled: !values.phone?.trim(),
             }}
           />
           <FormGroup label='연락처 공개 여부'>
