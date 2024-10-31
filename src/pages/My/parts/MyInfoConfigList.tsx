@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
-import MyInfoConfigItem from '@@pages/My/parts/MyInfo/MyInfoConfigItem';
+import MyInfoConfigItem from '@@pages/My/parts/MyInfoConfigItem';
 import { ConfigItem } from '@@pages/My/types';
 
 const StyledMyInfoConfigList = styled(Flex.Vertical)`

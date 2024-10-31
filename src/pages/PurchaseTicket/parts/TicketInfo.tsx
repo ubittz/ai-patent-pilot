@@ -2,8 +2,7 @@ import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
-
-import TicketList from './TicketList';
+import TicketList from '@@pages/PurchaseTicket/parts/TicketList';
 
 const StyledTicketInfo = styled(Flex.Vertical)`
   padding: 30px 30px 40px;

@@ -1,4 +1,4 @@
-import { Ticket10TimeIcon, Ticket1TimeIcon, Ticket3TimeIcon, Ticket5TimeIcon } from '@@pages/My/icons';
+import { Ticket10TimeIcon, Ticket1TimeIcon, Ticket3TimeIcon, Ticket5TimeIcon } from '@@pages/PurchaseTicket/icons';
 
 export const TICKET_TYPE = {
   TIME_1: '1time',

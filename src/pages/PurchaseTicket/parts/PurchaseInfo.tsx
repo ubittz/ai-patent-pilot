@@ -5,9 +5,9 @@ import Flex from '@@components/Flex';
 import FormGroup from '@@components/FormGroup';
 import Radio from '@@components/Radio';
 import Typography from '@@components/Typography';
-import { PURCHASE_TYPE } from '@@pages/My/constants';
-import PurchaseAccountForm from '@@pages/My/parts/PurchaseTicket/PurchaseAccountForm';
-import { PurchaseTicketDto } from '@@pages/My/types';
+import { PURCHASE_TYPE } from '@@pages/PurchaseTicket/constants';
+import PurchaseAccountForm from '@@pages/PurchaseTicket/parts/PurchaseAccountForm';
+import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
 
 import PurchaseCardForm from './PurchaseCardForm';
 

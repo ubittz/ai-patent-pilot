@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 import Popup from '@@components/Popup';
 import { useToggle } from '@@hooks/common';
-import { PURCHASE_TYPE, TICKET_TYPE } from '@@pages/My/constants';
-import PurchaseTicketContent from '@@pages/My/parts/PurchaseTicket/PurchaseTicketContent';
-import { PurchaseTicketDto } from '@@pages/My/types';
+import { PURCHASE_TYPE, TICKET_TYPE } from '@@pages/PurchaseTicket/constants';
+import PurchaseTicketContent from '@@pages/PurchaseTicket/parts/PurchaseTicketContent';
+import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 

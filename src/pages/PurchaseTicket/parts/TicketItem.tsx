@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-import { TICKET_TYPE_ICONS, TICKET_TYPE_PRICE, TICKET_TYPE_STRING } from '@@pages/My/constants';
-import { TicketItemProps } from '@@pages/My/types';
+import { TICKET_TYPE_ICONS, TICKET_TYPE_PRICE, TICKET_TYPE_STRING } from '@@pages/PurchaseTicket/constants';
+import { TicketItemProps } from '@@pages/PurchaseTicket/types';
 
 const StyledTicketItem = styled(Flex.Horizontal)<{ $selected: boolean }>`
   padding: 0 8px;

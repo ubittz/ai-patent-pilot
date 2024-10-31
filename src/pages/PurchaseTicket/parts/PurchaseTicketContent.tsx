@@ -8,12 +8,11 @@ import FooterContainer from '@@components/FooterContainer';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Typography from '@@components/Typography';
-import { TICKET_TYPE_PRICE } from '@@pages/My/constants';
-import { PurchaseTicketDto } from '@@pages/My/types';
-
-import PurchaseConsent from './PurchaseConsent';
-import PurchaseInfo from './PurchaseInfo';
-import TicketInfo from './TicketInfo';
+import { TICKET_TYPE_PRICE } from '@@pages/PurchaseTicket/constants';
+import PurchaseConsent from '@@pages/PurchaseTicket/parts/PurchaseConsent';
+import PurchaseInfo from '@@pages/PurchaseTicket/parts/PurchaseInfo';
+import TicketInfo from '@@pages/PurchaseTicket/parts/TicketInfo';
+import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
 
 const StyledPurchaseTicketContent = styled(FullScreen)``;
 

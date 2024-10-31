@@ -13,7 +13,7 @@ import Header from '@@components/Header';
 import InputFormGroup from '@@components/InputFormGroup';
 import Radio from '@@components/Radio';
 import Typography from '@@components/Typography';
-import { UpdateMyInfoForm } from '@@pages/My/types';
+import { UpdateMyInfoForm } from '@@pages/UpdateMyInfo/types';
 
 const StyledUpdateMyInfoContent = styled(FullScreen)`
   .body {

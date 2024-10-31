@@ -2,7 +2,7 @@ import { useFormikContext } from 'formik';
 
 import Flex from '@@components/Flex';
 import InputFormGroup from '@@components/InputFormGroup';
-import { PurchaseTicketDto } from '@@pages/My/types';
+import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
 
 function PurchaseCardForm() {
   const { getFieldProps } = useFormikContext<PurchaseTicketDto>();

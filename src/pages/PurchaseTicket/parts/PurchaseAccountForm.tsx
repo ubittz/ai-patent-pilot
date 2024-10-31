@@ -5,7 +5,7 @@ import Flex from '@@components/Flex';
 import InputFormGroup from '@@components/InputFormGroup';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-import { PurchaseTicketDto } from '@@pages/My/types';
+import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
 
 const StyledDescription = styled(Flex.Vertical)`
   border-radius: 16px;

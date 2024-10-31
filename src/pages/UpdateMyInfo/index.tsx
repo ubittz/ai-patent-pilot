@@ -3,9 +3,8 @@ import { useNavigate } from 'react-router-dom';
 
 import Popup from '@@components/Popup';
 import { useToggle } from '@@hooks/common';
-
-import UpdateMyInfoContent from './parts/UpdateMyInfo/UpdateMyInfoContent';
-import { UpdateMyInfoForm } from './types';
+import UpdateMyInfoContent from '@@pages/UpdateMyInfo/parts/UpdateMyInfoContent';
+import { UpdateMyInfoForm } from '@@pages/UpdateMyInfo/types';
 
 function UpdateMyInfo() {
   const navigate = useNavigate();

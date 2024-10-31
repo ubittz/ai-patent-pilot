@@ -5,10 +5,10 @@ import Home from '@@pages/Home';
 import Login from '@@pages/Login';
 import Main from '@@pages/Main';
 import My from '@@pages/My';
-import PurchaseTicket from '@@pages/My/PurchaseTicket';
-import UpdateMyInfo from '@@pages/My/UpdateMyInfo';
+import PurchaseTicket from '@@pages/PurchaseTicket';
 import Register from '@@pages/Register';
 import Account from '@@pages/Register/Account';
+import UpdateMyInfo from '@@pages/UpdateMyInfo';
 import { PAGES, ROUTE_PREFIX } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
