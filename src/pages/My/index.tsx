@@ -29,7 +29,7 @@ const CONFIG_LIST: ConfigItem[] = [
   {
     title: '서비스 이용권 안내',
     icon: <TicketIcon />,
-    path: pathGenerator(`${PAGES.MY}/update`),
+    path: pathGenerator(`${PAGES.MY}/ticket-history`),
   },
   {
     title: '결제 내역',
