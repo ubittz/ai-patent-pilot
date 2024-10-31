@@ -1,4 +1,4 @@
-import { ServiceHistoryItem } from './types';
+import { ServiceHistoryItem } from '@@pages/ServiceHistory/types';
 
 export const SERVICE_HISTORY_LIST: ServiceHistoryItem[] = [
   {

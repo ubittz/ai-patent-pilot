@@ -24,7 +24,7 @@ const CONFIG_LIST: ConfigItem[] = [
   {
     title: '서비스 이력 확인',
     icon: <BookIcon />,
-    path: pathGenerator(`${PAGES.MY}/update`),
+    path: pathGenerator(`${PAGES.MY}/service-history`),
   },
   {
     title: '서비스 이용권 안내',

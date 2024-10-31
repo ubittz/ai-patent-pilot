@@ -10,8 +10,7 @@ import Header from '@@components/Header';
 import InputFormGroup from '@@components/InputFormGroup';
 import Typography from '@@components/Typography';
 import { useToggle } from '@@hooks/common';
-
-import { AccountForm } from '../types';
+import { AccountForm } from '@@pages/Register/types';
 
 const StyledAccountContent = styled(FullScreen)`
   .body {

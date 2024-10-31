@@ -7,9 +7,8 @@ import Radio from '@@components/Radio';
 import Typography from '@@components/Typography';
 import { PURCHASE_TYPE } from '@@pages/PurchaseTicket/constants';
 import PurchaseAccountForm from '@@pages/PurchaseTicket/parts/PurchaseAccountForm';
+import PurchaseCardForm from '@@pages/PurchaseTicket/parts/PurchaseCardForm';
 import { PurchaseTicketDto } from '@@pages/PurchaseTicket/types';
-
-import PurchaseCardForm from './PurchaseCardForm';
 
 const StyledPurchaseInfo = styled(Flex.Vertical)`
   padding: 40px 30px 30px;

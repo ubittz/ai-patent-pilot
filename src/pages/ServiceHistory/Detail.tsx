@@ -4,11 +4,10 @@ import Flex from '@@components/Flex';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Typography from '@@components/Typography';
-
-import { SERVICE_HISTORY_LIST } from './constants';
-import BaseServiceDescription from './parts/BaseServiceDescription';
-import BaseServiceInfo from './parts/BaseServiceInfo';
-import { serviceDescriptionContentGenerator, serviceDescriptionTitleGenerator, serviceInfoContentGenerator } from './utils';
+import { SERVICE_HISTORY_LIST } from '@@pages/ServiceHistory/constants';
+import BaseServiceDescription from '@@pages/ServiceHistory/parts/BaseServiceDescription';
+import BaseServiceInfo from '@@pages/ServiceHistory/parts/BaseServiceInfo';
+import { serviceDescriptionContentGenerator, serviceDescriptionTitleGenerator, serviceInfoContentGenerator } from '@@pages/ServiceHistory/utils';
 
 function ServiceHistoryDetail() {
   const { id } = useParams();

@@ -2,10 +2,9 @@ import styled from 'styled-components';
 
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
+import { PopupProps } from '@@components/Popup/types';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-
-import { PopupProps } from './types';
 
 const StyledPopup = styled.div<{ $visible: boolean }>`
   position: fixed;

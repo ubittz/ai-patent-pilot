@@ -6,10 +6,9 @@ import { useNavigate } from 'react-router-dom';
 import Popup from '@@components/Popup';
 import { useToggle } from '@@hooks/common';
 import LoginContent from '@@pages/Login/parts/LoginContent';
+import { LoginForm } from '@@pages/Login/types';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
-
-import { LoginForm } from './types';
 
 const initialValues: LoginForm = {
   id: '',

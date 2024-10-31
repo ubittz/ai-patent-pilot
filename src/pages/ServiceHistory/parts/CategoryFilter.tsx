@@ -4,8 +4,7 @@ import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
-
-import CategoryItem from './CategoryItem';
+import CategoryItem from '@@pages/ServiceHistory/parts/CategoryItem';
 
 const StyledCategoryFilter = styled(Flex.Vertical)`
   border-bottom: 8px solid #fbfbfb;

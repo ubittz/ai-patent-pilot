@@ -6,8 +6,7 @@ import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Typography from '@@components/Typography';
 import CategoryFilter from '@@pages/ServiceHistory/parts/CategoryFilter';
-
-import ServiceList from './parts/ServiceList';
+import ServiceList from '@@pages/ServiceHistory/parts/ServiceList';
 
 const StyledServiceHistory = styled(FullScreen)`
   .body {
