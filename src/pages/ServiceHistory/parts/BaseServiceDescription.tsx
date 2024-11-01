@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-import { ServiceHistoryArrowIcon } from '@@pages/ServiceHistory/icons';
+import { DownArrowPointIcon } from '@@constants/icons';
 import { BaseServiceDescriptionProps } from '@@pages/ServiceHistory/types';
 
 const StyledBaseServiceDescription = styled(Flex.Vertical)`
@@ -28,7 +28,7 @@ function BaseServiceDescription({ title, contents }: BaseServiceDescriptionProps
     <StyledBaseServiceDescription>
       <Flex.Vertical gap={24}>
         <Typography.Header2>{title}</Typography.Header2>
-        <ServiceHistoryArrowIcon />
+        <DownArrowPointIcon />
       </Flex.Vertical>
       <Flex.Vertical>
         {contents.map((content, index) => (
