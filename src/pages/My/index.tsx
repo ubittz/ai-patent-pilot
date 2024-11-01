@@ -34,7 +34,7 @@ const CONFIG_LIST: ConfigItem[] = [
   {
     title: '결제 내역',
     icon: <CoinIcon />,
-    path: pathGenerator(`${PAGES.MY}/update`),
+    path: pathGenerator(`${PAGES.MY}/purchase-history`),
   },
 ];
 

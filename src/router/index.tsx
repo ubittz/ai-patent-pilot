@@ -5,6 +5,8 @@ import Home from '@@pages/Home';
 import Login from '@@pages/Login';
 import Main from '@@pages/Main';
 import My from '@@pages/My';
+import PurchaseHistory from '@@pages/PurchaseHistory';
+import PurchaseHistoryDetail from '@@pages/PurchaseHistory/Detail';
 import PurchaseTicket from '@@pages/PurchaseTicket';
 import Register from '@@pages/Register';
 import Account from '@@pages/Register/Account';
@@ -30,6 +32,8 @@ function Router() {
       <Route path={pathGenerator(`${PAGES.MY}/service-history`)} element={<ServiceHistory />} />
       <Route path={pathGenerator(`${PAGES.MY}/service-history/:id`)} element={<ServiceHistoryDetail />} />
       <Route path={pathGenerator(`${PAGES.MY}/ticket-history`)} element={<TicketHistory />} />
+      <Route path={pathGenerator(`${PAGES.MY}/purchase-history`)} element={<PurchaseHistory />} />
+      <Route path={pathGenerator(`${PAGES.MY}/purchase-history/:id`)} element={<PurchaseHistoryDetail />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );
