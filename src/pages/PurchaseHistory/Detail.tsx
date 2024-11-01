@@ -6,9 +6,8 @@ import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
+import { PURCHASE_HISTORY_LIST } from '@@pages/PurchaseHistory/constants';
 import { TICKET_TYPE_PRICE } from '@@pages/PurchaseTicket/constants';
-
-import { PURCHASE_HISTORY_LIST } from './constants';
 
 const StyledPurchaseHistoryDetail = styled(FullScreen)`
   .body {

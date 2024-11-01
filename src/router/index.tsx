@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Error from '@@pages/Error';
+import FutureTech from '@@pages/FutureTech';
 import Home from '@@pages/Home';
 import Login from '@@pages/Login';
 import Main from '@@pages/Main';
@@ -26,6 +27,7 @@ function Router() {
       <Route path={pathGenerator(PAGES.REGISTER)} element={<Register />} />
       <Route path={pathGenerator(`${PAGES.REGISTER}/account`)} element={<Account />} />
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
+      <Route path={pathGenerator(PAGES.FUTURE_TECH)} element={<FutureTech />} />
       <Route path={pathGenerator(PAGES.MY)} element={<My />} />
       <Route path={pathGenerator(`${PAGES.MY}/update`)} element={<UpdateMyInfo />} />
       <Route path={pathGenerator(`${PAGES.MY}/purchase-ticket`)} element={<PurchaseTicket />} />

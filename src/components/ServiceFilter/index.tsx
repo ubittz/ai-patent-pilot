@@ -1,10 +1,9 @@
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
+import { ServiceFilterProps } from '@@components/ServiceFilter/types';
 import Typography from '@@components/Typography';
 import CategoryItem from '@@pages/ServiceHistory/parts/CategoryItem';
-
-import { ServiceFilterProps } from './types';
 
 const StyledServiceFilter = styled(Flex.Vertical)`
   border-bottom: 8px solid #fbfbfb;

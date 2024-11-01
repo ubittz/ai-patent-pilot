@@ -41,7 +41,7 @@ const NAVIGATION_LIST: NavigationItemType[] = [
   },
   {
     title: '미래기술',
-    path: pathGenerator(PAGES.HOME),
+    path: pathGenerator(PAGES.FUTURE_TECH),
     activeIcon: <ActiveTechIcon />,
     inactiveIcon: <InactiveTechIcon />,
   },
