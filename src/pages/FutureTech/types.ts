@@ -1,14 +1,11 @@
-import { ReactNode } from 'react';
-
-export interface PatentContactItem {
+export interface Category {
   id: number;
-  activeIcon: ReactNode;
-  inactiveIcon: ReactNode;
-  title: string;
+  name: string;
 }
 
-export interface FutureTechItemProps {
-  item: PatentContactItem;
-  selected: boolean;
-  onSelect: (id: number) => void;
+export interface CategoryDomain {
+  id: number;
+  categoryId: number;
+  title: string;
+  description: string;
 }
