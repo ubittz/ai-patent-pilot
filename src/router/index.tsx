@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
+import CheckLevel from '@@pages/CheckLevel';
 import Error from '@@pages/Error';
 import FutureTech from '@@pages/FutureTech';
 import Home from '@@pages/Home';
@@ -36,6 +37,8 @@ function Router() {
       <Route path={pathGenerator(`${PAGES.MY}/ticket-history`)} element={<TicketHistory />} />
       <Route path={pathGenerator(`${PAGES.MY}/purchase-history`)} element={<PurchaseHistory />} />
       <Route path={pathGenerator(`${PAGES.MY}/purchase-history/:id`)} element={<PurchaseHistoryDetail />} />
+
+      <Route path={pathGenerator(`${PAGES.CHECK_LEVEL}/*`)} element={<CheckLevel />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );

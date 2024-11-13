@@ -7,4 +7,5 @@ export const PAGES = {
   HOME: '/home',
   FUTURE_TECH: '/future-tech',
   MY: '/my',
+  CHECK_LEVEL: '/check-level',
 } as const;
