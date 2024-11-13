@@ -50,8 +50,11 @@ function Main() {
           <Divider />
           <SNSLogin />
           <Flex.Horizontal className='main__forgot_password' flex={1} alignItems='center'>
-            <Typography.Header6 color={COLORS.SUB_GREEN}>
-              ID/PW를 잃어버리셨나요? <Typography.Header6 as='span'>ID/PW 찾기</Typography.Header6>
+            <Typography.Header6>
+              ID/PW를 잃어버리셨나요?{' '}
+              <Typography.Header6 color={COLORS.SUB_GREEN} as='span'>
+                ID/PW 찾기
+              </Typography.Header6>
             </Typography.Header6>
           </Flex.Horizontal>
         </Flex.Vertical>

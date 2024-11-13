@@ -18,6 +18,7 @@ const StyledSlider = styled.div<{ $currentIndex: number; $size?: number }>`
 `;
 
 const StyledSlick = styled(Slick)<{ gap: number }>`
+  flex: 0 0 auto;
   /* Slider Item에게 Gap을 주기 위한 속성들 */
   .slick-list {
     overflow: visible;

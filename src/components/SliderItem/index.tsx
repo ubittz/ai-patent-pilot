@@ -7,7 +7,7 @@ import { SliderItemProps } from '@@components/SliderItem/types';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 
-const StyledSliderItem = styled(Flex.Vertical)<{ $image: string; $imageHeight: number; $buttonColor: string }>`
+const StyledSliderItem = styled(Flex.Vertical)<{ $imageHeight: number; $buttonColor: string }>`
   border: 1px solid ${COLORS.LINE};
   border-radius: 16px;
   overflow: hidden;
@@ -18,10 +18,11 @@ const StyledSliderItem = styled(Flex.Vertical)<{ $image: string; $imageHeight: n
   .slider_item__image {
     height: ${({ $imageHeight }) => $imageHeight}px;
     overflow: hidden;
-    background-image: url(${({ $image }) => $image});
 
     & > img {
-      height: ${({ $imageHeight }) => $imageHeight}px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -40,10 +41,12 @@ const StyledSliderItem = styled(Flex.Vertical)<{ $image: string; $imageHeight: n
   }
 `;
 
-function SliderItem({ image, imageHeight = 194, title, hiddenButton = false, buttonColor = COLORS.MAIN_GREEN, children }: SliderItemProps) {
+function SliderItem({ image, imageHeight = 194, title, hiddenButton = true, buttonColor = COLORS.MAIN_GREEN, children }: SliderItemProps) {
   return (
-    <StyledSliderItem gap={16} $image={image} $imageHeight={imageHeight} $buttonColor={buttonColor}>
-      <Flex.Horizontal className='slider_item__image' />
+    <StyledSliderItem gap={16} $imageHeight={imageHeight} $buttonColor={buttonColor}>
+      <Flex.Horizontal className='slider_item__image'>
+        <img src={image} alt={title} />
+      </Flex.Horizontal>
       <Flex.Vertical gap={16} className='slider_item__content'>
         <Flex.Vertical gap={12}>
           <Typography.Header4>{title}</Typography.Header4>

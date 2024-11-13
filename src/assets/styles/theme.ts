@@ -31,6 +31,7 @@ export const theme: DefaultTheme = {
     [TYPOGRAPHY_THEME.HEADER_4]: 'font-size: 16px; font-weight: 700; line-height: 20.8px;',
     [TYPOGRAPHY_THEME.HEADER_5]: 'font-size: 14px; font-weight: 700; line-height: 18.2px;',
     [TYPOGRAPHY_THEME.HEADER_6]: 'font-size: 12px; font-weight: 400; line-height: 15.6px;',
+    [TYPOGRAPHY_THEME.HEADER_7]: 'font-size: 10px; font-weight: 400; line-height: 13px;',
   },
   color: {
     defualtFontColor: COLORS.MAIN_TEXT,
