@@ -3,6 +3,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 import CheckLevel from '@@pages/CheckLevel';
 import CheckLevelReesult from '@@pages/CheckLevel/Result';
 import Error from '@@pages/Error';
+import FindPatent from '@@pages/FindPatent';
+import FindPatentReesult from '@@pages/FindPatent/Result';
 import FutureTech from '@@pages/FutureTech';
 import Home from '@@pages/Home';
 import Login from '@@pages/Login';
@@ -49,6 +51,9 @@ function Router() {
 
       <Route path={pathGenerator(`${PAGES.CHECK_LEVEL}/result`)} element={<CheckLevelReesult />} />
       <Route path={pathGenerator(`${PAGES.CHECK_LEVEL}/*`)} element={<CheckLevel />} />
+
+      <Route path={pathGenerator(`${PAGES.FIND_PATENT}/result`)} element={<FindPatentReesult />} />
+      <Route path={pathGenerator(`${PAGES.FIND_PATENT}/*`)} element={<FindPatent />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );
