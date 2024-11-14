@@ -1,4 +1,4 @@
-import { Category, CategoryDomain } from './types';
+import { Category, CategoryDomain } from '@@pages/FutureTech/types';
 
 export const CATEGORY_LIST: Category[] = [
   {

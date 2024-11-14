@@ -1,9 +1,8 @@
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
-
-import CategoryDomainItem from './CategoryDomainItem';
-import { CATEGORY_DOMAIN_LIST } from '../constants';
-import { Category } from '../types';
+import { CATEGORY_DOMAIN_LIST } from '@@pages/FutureTech/constants';
+import CategoryDomainItem from '@@pages/FutureTech/parts/CategoryDomainItem';
+import { Category } from '@@pages/FutureTech/types';
 
 function CategorySection({
   category,

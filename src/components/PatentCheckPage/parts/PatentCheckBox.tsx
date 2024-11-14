@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 import { CheckBoxProps } from '@@components/CheckBox/types';
 import Flex from '@@components/Flex';
+import { CheckIcon } from '@@components/PatentCheckPage/icons';
 import { COLORS } from '@@constants/colors';
-
-import { CheckIcon } from '../icons';
 
 const StyledPatentCheckBox = styled.label`
   .check_box {

@@ -1,8 +1,7 @@
 import { ReactNode } from 'react';
 
+import { SERVICE_CATEGORY } from '@@pages/ServiceHistory/constants';
 import { asType } from '@@types/common';
-
-import { SERVICE_CATEGORY } from './constants';
 
 export interface ServiceHistoryItem {
   id: number;

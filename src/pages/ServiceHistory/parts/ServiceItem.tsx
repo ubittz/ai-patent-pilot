@@ -4,11 +4,10 @@ import styled from 'styled-components';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
+import { SERVICE_CATEGORY_STRING } from '@@pages/ServiceHistory/constants';
 import { ServiceHistoryItem } from '@@pages/ServiceHistory/types';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
-
-import { SERVICE_CATEGORY_STRING } from '../constants';
 
 const StyledServiceItem = styled(Flex.Vertical)`
   border-radius: 16px;

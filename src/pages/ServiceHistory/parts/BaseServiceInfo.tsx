@@ -3,9 +3,8 @@ import styled from 'styled-components';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
+import { SERVICE_CATEGORY_STRING } from '@@pages/ServiceHistory/constants';
 import { BaseServiceInfoProps } from '@@pages/ServiceHistory/types';
-
-import { SERVICE_CATEGORY_STRING } from '../constants';
 
 const StyledBaseServiceInfo = styled(Flex.Vertical)`
   border-bottom: 8px solid #fbfbfb;

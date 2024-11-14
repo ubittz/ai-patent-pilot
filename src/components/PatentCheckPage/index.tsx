@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
+import { ALL_TECH_SECTION, TECH_SECTION_STRINGS } from '@@components/PatentCheckPage/constants';
+import PatentCheckBox from '@@components/PatentCheckPage/parts/PatentCheckBox';
+import { PatentCheckPageProps } from '@@components/PatentCheckPage/types';
 import Typography from '@@components/Typography';
-
-import { ALL_TECH_SECTION, TECH_SECTION_STRINGS } from './constants';
-import PatentCheckBox from './parts/PatentCheckBox';
-import { PatentCheckPageProps } from './types';
 
 const StyledPatentCheckPage = styled(Flex.Vertical)``;
 

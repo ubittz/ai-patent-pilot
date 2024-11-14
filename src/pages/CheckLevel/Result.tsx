@@ -6,11 +6,10 @@ import Header from '@@components/Header';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 import { DownArrowPointIcon } from '@@constants/icons';
+import { ALL_CHECK_LEVEL_RESULT_STEP, CHECK_LEVEL_RESULT_STEP_DESCRIPTION } from '@@pages/CheckLevel/constants';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 import { useAppState } from '@@store/hooks';
-
-import { ALL_CHECK_LEVEL_RESULT_STEP, CHECK_LEVEL_RESULT_STEP_DESCRIPTION } from './constants';
 
 function CheckLevelReesult() {
   const navigate = useNavigate();

@@ -10,15 +10,14 @@ import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 import { DownArrowPointIcon, HeaderLogo } from '@@constants/icons';
+import CopyRight from '@@pages/Home/parts/CopyRight';
+import FutureTechSection from '@@pages/Home/parts/FutureTechSection';
+import NecessaryPatentSection from '@@pages/Home/parts/NecessaryPatentSection';
+import PatentLevelSection from '@@pages/Home/parts/PatentLevelSection';
+import PatentListSection from '@@pages/Home/parts/PatentListSection';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 import { asType } from '@@types/common';
-
-import CopyRight from './parts/CopyRight';
-import FutureTechSection from './parts/FutureTechSection';
-import NecessaryPatentSection from './parts/NecessaryPatentSection';
-import PatentLevelSection from './parts/PatentLevelSection';
-import PatentListSection from './parts/PatentListSection';
 
 const StyledHome = styled(FullScreen)`
   .body {

@@ -2,9 +2,8 @@ import styled from 'styled-components';
 
 import Button from '@@components/Button';
 import Flex from '@@components/Flex';
+import { PatenSectiontProps } from '@@components/PatentSection/types';
 import Typography from '@@components/Typography';
-
-import { PatenSectiontProps } from './types';
 
 const StyledPatentSection = styled(Flex.Vertical)`
   margin-top: 60px;

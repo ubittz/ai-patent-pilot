@@ -3,8 +3,7 @@ import styled from 'styled-components';
 import Flex from '@@components/Flex';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-
-import { CategoryDomain } from '../types';
+import { CategoryDomain } from '@@pages/FutureTech/types';
 
 const StyledCategoryDomainItem = styled(Flex.Vertical)<{ $selected: boolean }>`
   padding: 16px;

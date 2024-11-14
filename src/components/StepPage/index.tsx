@@ -5,10 +5,9 @@ import Button from '@@components/Button';
 import FooterContainer from '@@components/FooterContainer';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
+import { StepPageProps } from '@@components/StepPage/types';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
-
-import { StepPageProps } from './types';
 
 const StyledStepPage = styled(FullScreen)<{ $gauge: number }>`
   .step_page__progress {

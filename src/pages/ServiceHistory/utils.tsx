@@ -1,8 +1,7 @@
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
+import { SERVICE_CATEGORY } from '@@pages/ServiceHistory/constants';
 import { ServiceHistoryItem } from '@@pages/ServiceHistory/types';
-
-import { SERVICE_CATEGORY } from './constants';
 
 export const serviceInfoContentGenerator = ({ category }: ServiceHistoryItem) => {
   switch (category) {

@@ -8,9 +8,8 @@ import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import ServiceFilter from '@@components/ServiceFilter';
 import Typography from '@@components/Typography';
+import { SERVICE_CATEGORY_STRING } from '@@pages/ServiceHistory/constants';
 import ServiceList from '@@pages/ServiceHistory/parts/ServiceList';
-
-import { SERVICE_CATEGORY_STRING } from './constants';
 
 const StyledServiceHistory = styled(FullScreen)`
   .body {

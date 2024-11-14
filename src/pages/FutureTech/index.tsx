@@ -11,9 +11,8 @@ import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
 import { HeaderLogo } from '@@constants/icons';
 import { useToggle } from '@@hooks/common';
-
-import { CATEGORY_LIST } from './constants';
-import CategorySection from './parts/CategorySection';
+import { CATEGORY_LIST } from '@@pages/FutureTech/constants';
+import CategorySection from '@@pages/FutureTech/parts/CategorySection';
 
 const StyledFutureTech = styled(FullScreen)`
   .body {
