@@ -8,6 +8,8 @@ import { ServiceHistoryItem } from '@@pages/ServiceHistory/types';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
 
+import { SERVICE_CATEGORY_STRING } from '../constants';
+
 const StyledServiceItem = styled(Flex.Vertical)`
   border-radius: 16px;
   padding: 12px 16px 16px;
@@ -31,7 +33,7 @@ function ServiceItem({ service }: { service: ServiceHistoryItem }) {
   return (
     <StyledServiceItem gap={12} alignItems='flex-start' onClick={handleClick}>
       <Flex.Horizontal className='service_item__badge'>
-        <Typography.Header6 color={COLORS.WHITE_TEXT}>{service.category}</Typography.Header6>
+        <Typography.Header6 color={COLORS.WHITE_TEXT}>{SERVICE_CATEGORY_STRING[service.category]}</Typography.Header6>
       </Flex.Horizontal>
       <Typography.Header4 fontWeight={400}>{service.title}</Typography.Header4>
     </StyledServiceItem>

@@ -9,6 +9,7 @@ import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
+import { HeaderLogo } from '@@constants/icons';
 import { useToggle } from '@@hooks/common';
 
 import { CATEGORY_LIST } from './constants';
@@ -38,7 +39,9 @@ function FutureTech() {
       <Popup visible={visible} onConfirm={toggle}>
         미래 기술 상담 접수가 완료되었습니다.
       </Popup>
-      <Header hiddenBack>AI 특허 파일럿</Header>
+      <Header hiddenBack>
+        <HeaderLogo />
+      </Header>
       <Flex.Vertical className='body' gap={24}>
         <Flex.Vertical gap={4}>
           <Typography.Header2>선제적 미래기술 창출을 위한 특허</Typography.Header2>

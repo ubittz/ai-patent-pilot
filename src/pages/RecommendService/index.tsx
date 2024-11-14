@@ -8,16 +8,19 @@ import Header from '@@components/Header';
 import PatentSection from '@@components/PatentSection';
 import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
-import { DownArrowPointIcon } from '@@constants/icons';
+import { DownArrowPointIcon, HeaderLogo } from '@@constants/icons';
 import CustomPatentImage from '@@pages/RecommendService/images/custom_patent.jpeg';
 import FindPatentImage from '@@pages/RecommendService/images/find_patent.jpeg';
 import LavelCheckImage from '@@pages/RecommendService/images/level_check.jpeg';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
+import { useAppState } from '@@store/hooks';
 import { asType } from '@@types/common';
 
 function RecommendService() {
   const navigate = useNavigate();
+
+  const me = useAppState((state) => state.home.me);
 
   const [popupState, setPopupState] = useState<{
     visible: boolean;
@@ -42,15 +45,17 @@ function RecommendService() {
       <Popup visible={popupState.visible} onConfirm={handleConfirm}>
         서비스 이용권을 사용하시겠습니까?
       </Popup>
-      <Header>AI 파일럿</Header>
+      <Header hiddenBack>
+        <HeaderLogo />
+      </Header>
       <Flex.Vertical className='body tw-pt-[40px] tw-pb-[80px]'>
         <Flex.Vertical className='tw-px-[30px]' gap={24}>
           <Typography.Header2>
-            김준수님!
+            {me.name}님!
             <br />
             AI 특허 파일럿만의
             <br />
-            특별한 서비스를 경헙해보세요.
+            특별한 서비스를 경험해보세요.
           </Typography.Header2>
           <DownArrowPointIcon />
         </Flex.Vertical>

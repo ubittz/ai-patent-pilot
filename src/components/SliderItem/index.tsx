@@ -41,7 +41,15 @@ const StyledSliderItem = styled(Flex.Vertical)<{ $imageHeight: number; $buttonCo
   }
 `;
 
-function SliderItem({ image, imageHeight = 194, title, hiddenButton = true, buttonColor = COLORS.MAIN_GREEN, children }: SliderItemProps) {
+function SliderItem({
+  image,
+  imageHeight = 194,
+  title,
+  hiddenButton = true,
+  buttonColor = COLORS.MAIN_GREEN,
+  onClickButton,
+  children,
+}: SliderItemProps) {
   return (
     <StyledSliderItem gap={16} $imageHeight={imageHeight} $buttonColor={buttonColor}>
       <Flex.Horizontal className='slider_item__image'>
@@ -53,7 +61,7 @@ function SliderItem({ image, imageHeight = 194, title, hiddenButton = true, butt
           <Flex.Horizontal>{children}</Flex.Horizontal>
         </Flex.Vertical>
         {!hiddenButton && (
-          <Button.Small className='slider_item__button'>
+          <Button.Small className='slider_item__button' onClick={onClickButton}>
             <RightArrowIcon />
           </Button.Small>
         )}

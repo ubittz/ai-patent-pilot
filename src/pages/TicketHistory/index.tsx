@@ -36,7 +36,7 @@ function TicketHistory() {
             현재 보유하신 이용권은
             <br />
             <Typography.Header2 as='span' color={COLORS.MAIN_GREEN}>
-              N
+              3
             </Typography.Header2>
             개 입니다.
           </Typography.Header2>

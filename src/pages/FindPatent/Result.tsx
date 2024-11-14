@@ -13,6 +13,7 @@ import { useToggle } from '@@hooks/common';
 import { FIND_PATENT_RESULT_LIST } from '@@pages/FindPatent/constants';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
+import { useAppState } from '@@store/hooks';
 
 const StyledDivider = styled.div`
   height: 1px;
@@ -21,6 +22,9 @@ const StyledDivider = styled.div`
 
 function FindPatentReesult() {
   const navigate = useNavigate();
+
+  const me = useAppState((state) => state.home.me);
+
   const [visible, toggle] = useToggle();
 
   const handleClickBack = () => {
@@ -38,7 +42,7 @@ function FindPatentReesult() {
       <Flex.Vertical className='body tw-py-[40px] tw-px-[30px]' gap={34}>
         <Flex.Vertical gap={24}>
           <Typography.Header2>
-            김준수님께서
+            {me.name}님께서
             <br />
             찾으시는 특허권의
             <br />

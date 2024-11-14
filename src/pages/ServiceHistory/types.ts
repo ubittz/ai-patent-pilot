@@ -1,13 +1,17 @@
 import { ReactNode } from 'react';
 
+import { asType } from '@@types/common';
+
+import { SERVICE_CATEGORY } from './constants';
+
 export interface ServiceHistoryItem {
   id: number;
-  category: string;
+  category: ServiceCategory;
   title: string;
 }
 
 export interface BaseServiceInfoProps {
-  category: string;
+  category: ServiceCategory;
   contents: ServiceInfoContent[];
 }
 
@@ -25,3 +29,5 @@ export interface ServiceDescriptionContent {
   title: ReactNode;
   description: ReactNode;
 }
+
+export type ServiceCategory = asType<typeof SERVICE_CATEGORY>;

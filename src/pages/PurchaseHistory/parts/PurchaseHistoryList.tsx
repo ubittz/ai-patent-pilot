@@ -12,7 +12,7 @@ const StyledPurchaseHistoryList = styled(Flex.Vertical)`
 function PurchaseHistoryList() {
   return (
     <StyledPurchaseHistoryList gap={12}>
-      <Typography.Header6>총 N개 사용</Typography.Header6>
+      <Typography.Header6>총 4개 사용</Typography.Header6>
       <Flex.Vertical gap={12}>
         {PURCHASE_HISTORY_LIST.map((history) => (
           <PurchaseHistoryItem key={history.id} purchaseHistory={history} />

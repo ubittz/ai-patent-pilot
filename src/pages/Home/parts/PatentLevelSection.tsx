@@ -1,7 +1,13 @@
 import PatentSection from '@@components/PatentSection';
 import PattentLevelImage from '@@pages/Home/images/patent_level.jpeg';
+import { PAGES } from '@@router/constants';
+import { asType } from '@@types/common';
 
-function PatentLevelSection() {
+function PatentLevelSection({ onClickButton }: { onClickButton: (page: asType<typeof PAGES>) => void }) {
+  const handleClickButton = () => {
+    onClickButton(PAGES.CHECK_LEVEL);
+  };
+
   return (
     <PatentSection
       title='나의 특허 기술 레벨 측정'
@@ -9,6 +15,7 @@ function PatentLevelSection() {
       image={PattentLevelImage}
       buttonProps={{
         children: '측정하러 가기',
+        onClick: handleClickButton,
       }}
     />
   );

@@ -7,6 +7,7 @@ import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
+import { HeaderLogo } from '@@constants/icons';
 import Divider from '@@pages/Main/parts/Divider';
 import SNSLogin from '@@pages/Main/parts/SNSLogin';
 import { PAGES } from '@@router/constants';
@@ -31,7 +32,9 @@ function Main() {
 
   return (
     <StyledMain>
-      <Header hiddenBack>AI 특허 파일럿</Header>
+      <Header hiddenBack>
+        <HeaderLogo />
+      </Header>
       <Flex.Vertical className='body'>
         <Flex.Horizontal className='main__top' flex={1} alignItems='center' gap={12}>
           <Typography.Header1>

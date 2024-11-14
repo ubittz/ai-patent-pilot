@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { MouseEventHandler, PropsWithChildren } from 'react';
 
 export type SliderItemProps = PropsWithChildren<{
   image: string;
@@ -6,4 +6,5 @@ export type SliderItemProps = PropsWithChildren<{
   title: string;
   hiddenButton?: boolean;
   buttonColor?: string;
+  onClickButton?: MouseEventHandler<HTMLButtonElement>;
 }>;

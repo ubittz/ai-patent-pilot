@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Flex from '@@components/Flex';
@@ -39,9 +40,15 @@ const CONFIG_LIST: ConfigItem[] = [
 ];
 
 function My() {
+  const navigate = useNavigate();
+
+  const handleClickBack = () => {
+    navigate(-1);
+  };
+
   return (
     <StyledMy navigation>
-      <Header />
+      <Header onBack={handleClickBack} />
       <Flex.Vertical className='body'>
         <MyInfoCard />
         <MyInfoConfigList itemList={CONFIG_LIST} />

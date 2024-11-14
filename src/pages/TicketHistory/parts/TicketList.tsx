@@ -31,7 +31,7 @@ const TICKET_ITEMS: TicketHistoryItem[] = [
 function TicketList() {
   return (
     <StyledTicketList gap={12}>
-      <Typography.Header6>총 N개 사용</Typography.Header6>
+      <Typography.Header6>총 3개 사용</Typography.Header6>
       {TICKET_ITEMS.map((ticket) => (
         <TicketItem key={ticket.id} ticket={ticket} />
       ))}

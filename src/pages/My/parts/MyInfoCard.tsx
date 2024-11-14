@@ -7,6 +7,7 @@ import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
+import { useAppState } from '@@store/hooks';
 
 const StyledMyInfoCard = styled(Flex.Vertical)`
   padding: 30px;
@@ -39,22 +40,30 @@ const StyledMyInfoCard = styled(Flex.Vertical)`
 function MyInfoCard() {
   const navigate = useNavigate();
 
+  const me = useAppState((state) => state.home.me);
+
   const handleClickPurchase = () => {
     navigate(pathGenerator(`${PAGES.MY}/purchase-ticket`));
+  };
+
+  const handleClickLogout = () => {
+    navigate(pathGenerator(''));
   };
 
   return (
     <StyledMyInfoCard gap={16}>
       <Flex.Horizontal justifyContent='space-between' alignItems='center'>
-        <Typography.Header2>안녕하세요, 김준수님!</Typography.Header2>
-        <Typography.Header6 color={COLORS.PLACEHOLDER}>Logout</Typography.Header6>
+        <Typography.Header2>안녕하세요, {me.name}님!</Typography.Header2>
+        <Typography.Header6 color={COLORS.PLACEHOLDER} onClick={handleClickLogout}>
+          Logout
+        </Typography.Header6>
       </Flex.Horizontal>
       <Flex.Vertical className='my_info_card__ticket'>
         <Flex.Horizontal className='my_info_card__ticket_top' justifyContent='space-between'>
           <Typography.Header5>보유 이용권</Typography.Header5>
           <Typography.Header5>
             <Typography.Header5 as='span' color={COLORS.MAIN_GREEN}>
-              N
+              3
             </Typography.Header5>
             개
           </Typography.Header5>

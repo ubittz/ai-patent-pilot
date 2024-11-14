@@ -5,6 +5,8 @@ import Typography from '@@components/Typography';
 import { COLORS } from '@@constants/colors';
 import { BaseServiceInfoProps } from '@@pages/ServiceHistory/types';
 
+import { SERVICE_CATEGORY_STRING } from '../constants';
+
 const StyledBaseServiceInfo = styled(Flex.Vertical)`
   border-bottom: 8px solid #fbfbfb;
   padding: 30px;
@@ -29,7 +31,9 @@ const StyledBaseServiceInfo = styled(Flex.Vertical)`
 function BaseServiceInfo({ category, contents }: BaseServiceInfoProps) {
   return (
     <StyledBaseServiceInfo gap={20} alignItems='flex-start'>
-      <div className='service_info__badge'>{category}</div>
+      <div className='service_info__badge'>
+        <Typography.Header5 color='inherit'>{SERVICE_CATEGORY_STRING[category]}</Typography.Header5>
+      </div>
       <Flex.Vertical gap={8}>
         {contents.map((content) => (
           <Flex.Horizontal key={content.key}>

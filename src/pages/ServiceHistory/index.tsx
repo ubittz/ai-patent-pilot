@@ -10,6 +10,8 @@ import ServiceFilter from '@@components/ServiceFilter';
 import Typography from '@@components/Typography';
 import ServiceList from '@@pages/ServiceHistory/parts/ServiceList';
 
+import { SERVICE_CATEGORY_STRING } from './constants';
+
 const StyledServiceHistory = styled(FullScreen)`
   .body {
     .service_history__service_list {
@@ -17,8 +19,6 @@ const StyledServiceHistory = styled(FullScreen)`
     }
   }
 `;
-
-const CATEGORY_LIST = ['기술 레벨 측정', '등록 특허 찾기', '내가 원하는 특허', '미래 기술'];
 
 function ServiceHistory() {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ function ServiceHistory() {
         <Typography.Header4>서비스 이력 확인</Typography.Header4>
       </Header>
       <Flex.Vertical className='body'>
-        <ServiceFilter categoryList={CATEGORY_LIST} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>
+        <ServiceFilter categoryList={Object.values(SERVICE_CATEGORY_STRING)} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>
           <Typography.Header2>
             이용했던 서비스 이력을
             <br />
