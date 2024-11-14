@@ -10,6 +10,7 @@ import My from '@@pages/My';
 import PurchaseHistory from '@@pages/PurchaseHistory';
 import PurchaseHistoryDetail from '@@pages/PurchaseHistory/Detail';
 import PurchaseTicket from '@@pages/PurchaseTicket';
+import RecommendService from '@@pages/RecommendService';
 import Register from '@@pages/Register';
 import Account from '@@pages/Register/Account';
 import ServiceHistory from '@@pages/ServiceHistory';
@@ -23,12 +24,19 @@ function Router() {
   return (
     <Routes>
       <Route path='/' element={<Navigate to={ROUTE_PREFIX} />} />
+
       <Route path={pathGenerator(PAGES.MAIN)} element={<Main />} />
       <Route path={pathGenerator(PAGES.LOGIN)} element={<Login />} />
+
       <Route path={pathGenerator(PAGES.REGISTER)} element={<Register />} />
       <Route path={pathGenerator(`${PAGES.REGISTER}/account`)} element={<Account />} />
+
       <Route path={pathGenerator(PAGES.HOME)} element={<Home />} />
+
+      <Route path={pathGenerator(`${PAGES.RECOMMEND_SERVICE}`)} element={<RecommendService />} />
+
       <Route path={pathGenerator(PAGES.FUTURE_TECH)} element={<FutureTech />} />
+
       <Route path={pathGenerator(PAGES.MY)} element={<My />} />
       <Route path={pathGenerator(`${PAGES.MY}/update`)} element={<UpdateMyInfo />} />
       <Route path={pathGenerator(`${PAGES.MY}/purchase-ticket`)} element={<PurchaseTicket />} />

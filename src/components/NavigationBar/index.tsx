@@ -35,7 +35,7 @@ const NAVIGATION_LIST: NavigationItemType[] = [
   },
   {
     title: '추천 서비스',
-    path: pathGenerator(PAGES.HOME),
+    path: pathGenerator(PAGES.RECOMMEND_SERVICE),
     activeIcon: <ActiveRecommendIcon />,
     inactiveIcon: <InactiveRecommendIcon />,
   },

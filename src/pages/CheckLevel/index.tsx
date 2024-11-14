@@ -9,20 +9,7 @@ import { pathGenerator } from '@@router/utils';
 function CheckLevel() {
   const naviate = useNavigate();
 
-  const ROUTES: RouteObject[] = [
-    {
-      path: '/first',
-      element: <First />,
-    },
-    {
-      path: '/second',
-      element: <Second />,
-    },
-    {
-      path: '/third',
-      element: <Third />,
-    },
-  ];
+  const ROUTES: RouteObject[] = [];
 
   const { routes, gauge, step } = useRouteStepper(ROUTES);
 
@@ -42,17 +29,5 @@ function CheckLevel() {
     </StepPage>
   );
 }
-
-const First = () => {
-  return <Flex.Vertical className='body'>First</Flex.Vertical>;
-};
-
-const Second = () => {
-  return <Flex.Vertical className='body'>Second</Flex.Vertical>;
-};
-
-const Third = () => {
-  return <Flex.Vertical className='body'>Third</Flex.Vertical>;
-};
 
 export default CheckLevel;
