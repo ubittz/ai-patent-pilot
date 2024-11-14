@@ -2,6 +2,8 @@ import { Navigate, Route, Routes } from 'react-router-dom';
 
 import CheckLevel from '@@pages/CheckLevel';
 import CheckLevelReesult from '@@pages/CheckLevel/Result';
+import CustomPatent from '@@pages/CustomPatent';
+import CustomPatentReesult from '@@pages/CustomPatent/Result';
 import Error from '@@pages/Error';
 import FindPatent from '@@pages/FindPatent';
 import FindPatentReesult from '@@pages/FindPatent/Result';
@@ -54,6 +56,9 @@ function Router() {
 
       <Route path={pathGenerator(`${PAGES.FIND_PATENT}/result`)} element={<FindPatentReesult />} />
       <Route path={pathGenerator(`${PAGES.FIND_PATENT}/*`)} element={<FindPatent />} />
+
+      <Route path={pathGenerator(`${PAGES.CUSTOM_PATENT}/result`)} element={<CustomPatentReesult />} />
+      <Route path={pathGenerator(`${PAGES.CUSTOM_PATENT}/*`)} element={<CustomPatent />} />
       <Route path='*' element={<Error />} />
     </Routes>
   );
