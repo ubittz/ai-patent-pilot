@@ -38,8 +38,12 @@ function UpdateMyInfo() {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <div>
-        <Popup visible={popup} onConfirm={togglePopup} content='비밀번호가 일치하지 않습니다.' />
-        <Popup visible={completePopup} onConfirm={handleConfirmComplete} content='내 정보 수정이 완료되었습니다.' />
+        <Popup visible={popup} onConfirm={togglePopup}>
+          비밀번호가 일치하지 않습니다.
+        </Popup>
+        <Popup visible={completePopup} onConfirm={handleConfirmComplete}>
+          내 정보 수정이 완료되었습니다.
+        </Popup>
         <UpdateMyInfoContent />
       </div>
     </Formik>

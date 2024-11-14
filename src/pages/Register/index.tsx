@@ -42,7 +42,9 @@ function Register() {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <div>
-        <Popup visible={popupVisible} content={popupContent} onConfirm={togglePopupVisible} />
+        <Popup visible={popupVisible} onConfirm={togglePopupVisible}>
+          {popupContent}
+        </Popup>
         <RegisterContent />
       </div>
     </Formik>

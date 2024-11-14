@@ -35,7 +35,9 @@ function Login() {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <div>
-        <Popup visible={visiblePopup} content={popupContent} onConfirm={togglePopup} />
+        <Popup visible={visiblePopup} onConfirm={togglePopup}>
+          {popupContent}
+        </Popup>
         <LoginContent />
       </div>
     </Formik>

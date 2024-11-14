@@ -42,12 +42,12 @@ const StyledPopup = styled.div<{ $visible: boolean }>`
   }
 `;
 
-function Popup({ visible, content, confirmText = '확인', onConfirm }: PopupProps) {
+function Popup({ visible, confirmText = '확인', children, onConfirm }: PopupProps) {
   return (
     <StyledPopup $visible={visible}>
       <Flex.Vertical className='popup_box' alignItems='center'>
         <Typography.Header4 className='popup_box__content' fontWeight={400}>
-          {content}
+          {children}
         </Typography.Header4>
         <Button.Small className='popup_box__button' onClick={onConfirm}>
           {confirmText}

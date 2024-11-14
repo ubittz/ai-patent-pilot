@@ -31,7 +31,9 @@ function PurchaseTicket() {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <div>
-        <Popup visible={visible} content='결제가 완료되었습니다.' onConfirm={handleConfirm} />
+        <Popup visible={visible} onConfirm={handleConfirm}>
+          결제가 완료되었습니다.
+        </Popup>
         <PurchaseTicketContent />
       </div>
     </Formik>

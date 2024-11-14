@@ -44,8 +44,12 @@ function Account() {
   return (
     <Formik initialValues={initialValues} onSubmit={handleSubmit}>
       <div>
-        <Popup visible={popupVisible} content={popupContent} onConfirm={togglePopupVisible} />
-        <Popup visible={completePopupVisible} content='회원가입이 완료되었어요!' onConfirm={handleConfirmComplete} />
+        <Popup visible={popupVisible} onConfirm={togglePopupVisible}>
+          {popupContent}
+        </Popup>
+        <Popup visible={completePopupVisible} onConfirm={handleConfirmComplete}>
+          회원가입이 완료되었어요!
+        </Popup>
         <AccountContent />
       </div>
     </Formik>

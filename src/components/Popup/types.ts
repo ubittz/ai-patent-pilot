@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren } from 'react';
 
-export interface PopupProps {
+export type PopupProps = PropsWithChildren<{
   visible: boolean;
-  content: ReactNode;
   confirmText?: string;
   onConfirm: () => void;
-}
+}>;
