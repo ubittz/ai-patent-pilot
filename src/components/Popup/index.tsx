@@ -50,7 +50,7 @@ function Popup({ visible, confirmText = '확인', children, onConfirm }: PopupPr
         <Typography.Header4 className='popup_box__content' fontWeight={400}>
           {children}
         </Typography.Header4>
-        <Button.Small className='popup_box__button' onClick={onConfirm}>
+        <Button.Small className='popup_box__button' type='button' onClick={onConfirm}>
           {confirmText}
         </Button.Small>
       </Flex.Vertical>

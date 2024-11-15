@@ -10,7 +10,9 @@ import FooterContainer from '@@components/FooterContainer';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import InputFormGroup from '@@components/InputFormGroup';
+import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
+import { useToggle } from '@@hooks/common';
 import { RegisterForm } from '@@pages/Register/types';
 
 const StyledRegisterContent = styled(FullScreen)`
@@ -33,6 +35,7 @@ const StyledRegisterContent = styled(FullScreen)`
 function RegisterContent() {
   const navigate = useNavigate();
 
+  const [visible, toggle] = useToggle();
   const [isRequestVerify, setIsRequestVerify] = useState<boolean>(false);
 
   const { values, getFieldProps, handleSubmit } = useFormikContext<RegisterForm>();
@@ -42,11 +45,20 @@ function RegisterContent() {
   };
 
   const handleClickVerify = () => {
+    toggle();
+    setIsRequestVerify(true);
+  };
+
+  const handleConfirm = () => {
+    toggle();
     setIsRequestVerify(true);
   };
 
   return (
     <Form onSubmit={handleSubmit}>
+      <Popup visible={visible} onConfirm={handleConfirm}>
+        인증번호 전송이 완료되었습니다.
+      </Popup>
       <StyledRegisterContent>
         <Header onBack={handleClickBack} />
         <Flex.Vertical className='body' gap={30}>

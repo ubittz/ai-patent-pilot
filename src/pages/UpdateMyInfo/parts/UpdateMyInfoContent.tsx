@@ -11,8 +11,10 @@ import FormGroup from '@@components/FormGroup';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import InputFormGroup from '@@components/InputFormGroup';
+import Popup from '@@components/Popup';
 import Radio from '@@components/Radio';
 import Typography from '@@components/Typography';
+import { useToggle } from '@@hooks/common';
 import { UpdateMyInfoForm } from '@@pages/UpdateMyInfo/types';
 
 const StyledUpdateMyInfoContent = styled(FullScreen)`
@@ -29,6 +31,7 @@ function UpdateMyInfoContent() {
   const navigate = useNavigate();
 
   const { values, getFieldProps, handleSubmit, setFieldValue } = useFormikContext<UpdateMyInfoForm>();
+  const [visible, toggle] = useToggle();
 
   const handleBack = () => {
     navigate(-1);
@@ -40,6 +43,9 @@ function UpdateMyInfoContent() {
 
   return (
     <Form onSubmit={handleSubmit}>
+      <Popup visible={visible} onConfirm={toggle}>
+        인증번호 전송이 완료되었습니다.
+      </Popup>
       <StyledUpdateMyInfoContent>
         <Header onBack={handleBack}>
           <Typography.Header4>내 정보 수정</Typography.Header4>
@@ -63,6 +69,7 @@ function UpdateMyInfoContent() {
               children: '인증하기',
               type: 'button',
               disabled: !values.phone?.trim(),
+              onClick: toggle,
             }}
           />
           <FormGroup label='연락처 공개 여부'>

@@ -8,6 +8,7 @@ import FooterContainer from '@@components/FooterContainer';
 import FullScreen from '@@components/FullScreen';
 import Header from '@@components/Header';
 import InputFormGroup from '@@components/InputFormGroup';
+import Popup from '@@components/Popup';
 import Typography from '@@components/Typography';
 import { useToggle } from '@@hooks/common';
 import { AccountForm } from '@@pages/Register/types';
@@ -24,18 +25,21 @@ function AccountContent() {
 
   const { values, getFieldProps, handleSubmit } = useFormikContext<AccountForm>();
 
-  const [, toggleCheck] = useToggle();
+  const [visible, toggle] = useToggle();
 
   const handleClickBack = () => {
     navigate(-1);
   };
 
   const handleClickCheck = () => {
-    toggleCheck();
+    toggle();
   };
 
   return (
     <Form onSubmit={handleSubmit}>
+      <Popup visible={visible} onConfirm={toggle}>
+        사용 가능한 아이디입니다.
+      </Popup>
       <StyledAccountContent>
         <Header onBack={handleClickBack} />
         <Flex.Vertical className='body' gap={30}>
