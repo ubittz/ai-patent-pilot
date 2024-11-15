@@ -29,9 +29,13 @@ function CustomPatentReesult() {
     navigate(pathGenerator(PAGES.RECOMMEND_SERVICE));
   };
 
+  const handleConfirm = () => {
+    navigate(pathGenerator(`${PAGES.MY}/service-history`));
+  };
+
   return (
     <FullScreen>
-      <Popup visible={visible} onConfirm={toggle}>
+      <Popup visible={visible} onConfirm={handleConfirm}>
         검토 요청이 완료되었습니다.
         <br />
         서비스 이력 확인에서 확인 가능합니다.
