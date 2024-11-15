@@ -9,12 +9,13 @@ import Typography from '@@components/Typography';
 const StyledInputFormGroup = styled(Flex.Vertical)`
   .input_form_group__input_wrap {
     & > input {
-      flex: 1;
+      // 이상하게 안드로이드 삼성 브라우저에서 flex: 1 속성이 안 먹음;;;;;;;;;;;;;
+      width: 100%;
     }
 
     & > button {
       flex: 0 0 auto;
-      padding: 0 19.5px;
+      padding: 0 19px;
     }
   }
 `;
@@ -23,7 +24,7 @@ function InputFormGroup({ label, inputProps, buttonProps, ...props }: InputFormG
   return (
     <StyledInputFormGroup gap={2} {...props}>
       {label && <Typography.Header6>{label}</Typography.Header6>}
-      <Flex.Horizontal className='input_form_group__input_wrap' gap={12}>
+      <Flex.Horizontal className='input_form_group__input_wrap' gap={14}>
         <TextField {...inputProps} />
         {buttonProps && <Button.Medium {...buttonProps} />}
       </Flex.Horizontal>
