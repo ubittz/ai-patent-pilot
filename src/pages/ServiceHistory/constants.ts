@@ -20,17 +20,17 @@ export const SERVICE_HISTORY_LIST: ServiceHistoryItem[] = [
   {
     id: 1,
     category: SERVICE_CATEGORY.CHECK_LEVEL,
-    title: '인공지능을 이용한 기술수준평가',
+    title: 'B섹션(처리조작;운수)',
   },
   {
     id: 2,
     category: SERVICE_CATEGORY.FIND_PATENT,
-    title: '#드론 #카메라 #센서',
+    title: 'F섹션(기계공학; 조명; 가열; 무기; 폭파)',
   },
   {
     id: 3,
     category: SERVICE_CATEGORY.CUSTOM_PATENT,
-    title: '드론을 활용한 녹조제거 및 개선시스템',
+    title: 'F섹션(기계공학; 조명; 가열; 무기; 폭파)',
   },
   {
     id: 4,
