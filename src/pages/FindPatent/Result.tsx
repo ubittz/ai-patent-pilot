@@ -34,7 +34,9 @@ function FindPatentReesult() {
   return (
     <FullScreen>
       <Popup visible={visible} onConfirm={toggle}>
-        서비스 준비 중입니다.
+        상담 신청이 완료되었습니다.
+        <br />
+        서비스 이력 확인에서 확인 가능합니다.
       </Popup>
       <Header onBack={handleClickBack}>
         <Typography.Header4>결과보기</Typography.Header4>

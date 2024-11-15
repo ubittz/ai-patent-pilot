@@ -32,6 +32,7 @@ const StyledPopup = styled.div<{ $visible: boolean }>`
     border-radius: 12px;
 
     .popup_box__content {
+      text-align: center;
       flex: 1;
       padding-top: 44px;
     }
