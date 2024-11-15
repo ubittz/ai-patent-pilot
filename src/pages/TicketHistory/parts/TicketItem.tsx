@@ -38,6 +38,8 @@ const StyledTicketItem = styled(Flex.Vertical)<{ $spread: boolean; $status: Tick
 function TicketItem({ ticket }: { ticket: TicketHistoryItem }) {
   const [spread, toggle] = useToggle();
 
+  console.log(ticket);
+
   return (
     <StyledTicketItem $spread={spread} $status={ticket.status}>
       <Flex.Horizontal className='ticket_item__info' justifyContent='space-between'>
@@ -51,28 +53,19 @@ function TicketItem({ ticket }: { ticket: TicketHistoryItem }) {
         </Flex.Vertical>
       </Flex.Horizontal>
       <Flex.Vertical className='ticket_item__history' gap={8}>
-        <Flex.Horizontal gap={5}>
-          <Typography.Header6 className='ticket_item__history_title' fontWeight={400} color={COLORS.SUB_TEXT}>
-            이용한 카테고리
-          </Typography.Header6>
-          <Flex.Horizontal justifyContent='space-between' flex={1}>
-            <Typography.Header6>기술레벨 측정</Typography.Header6>
-            <Typography.Header6 fontWeight={400} color={COLORS.SUB_TEXT}>
-              2024.10.21
+        {Array.from({ length: ticket.number - (ticket.status === TICKET_STATUS.EXPIRY ? 0 : 1) }).map((_, index) => (
+          <Flex.Horizontal key={index} gap={5}>
+            <Typography.Header6 className='ticket_item__history_title' fontWeight={400} color={COLORS.SUB_TEXT}>
+              이용한 카테고리
             </Typography.Header6>
+            <Flex.Horizontal justifyContent='space-between' flex={1}>
+              <Typography.Header6>기술레벨 측정</Typography.Header6>
+              <Typography.Header6 fontWeight={400} color={COLORS.SUB_TEXT}>
+                2024.10.21
+              </Typography.Header6>
+            </Flex.Horizontal>
           </Flex.Horizontal>
-        </Flex.Horizontal>
-        <Flex.Horizontal gap={5}>
-          <Typography.Header6 className='ticket_item__history_title' fontWeight={400} color={COLORS.SUB_TEXT}>
-            이용한 카테고리
-          </Typography.Header6>
-          <Flex.Horizontal justifyContent='space-between' flex={1}>
-            <Typography.Header6>기술레벨 측정</Typography.Header6>
-            <Typography.Header6 fontWeight={400} color={COLORS.SUB_TEXT}>
-              2024.10.21
-            </Typography.Header6>
-          </Flex.Horizontal>
-        </Flex.Horizontal>
+        ))}
       </Flex.Vertical>
     </StyledTicketItem>
   );

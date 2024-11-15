@@ -17,7 +17,7 @@ export function UpArrowIcon(props: DefaultIconProps) {
         <rect width='16' height='16' transform='matrix(0 1 1 0 0 0)' fill='#D9D9D9' />
       </mask>
       <g mask='url(#mask0_67_6577)'></g>
-      <g clip-path='url(#clip0_67_6577)'>
+      <g clipPath='url(#clip0_67_6577)'>
         <mask id='mask1_67_6577' style={{ maskType: 'alpha' }} maskUnits='userSpaceOnUse' x='0' y='4' width='16' height='7'>
           <rect x='0.857178' y='10.9841' width='6.34921' height='14.2857' transform='rotate(-90 0.857178 10.9841)' fill='black' />
         </mask>
@@ -42,7 +42,7 @@ export function DownArrowIcon(props: DefaultIconProps) {
         <rect width='16' height='16' transform='matrix(0 -1 -1 0 16 16)' fill='#D9D9D9' />
       </mask>
       <g mask='url(#mask0_67_6594)'></g>
-      <g clip-path='url(#clip0_67_6594)'>
+      <g clipPath='url(#clip0_67_6594)'>
         <mask id='mask1_67_6594' style={{ maskType: 'alpha' }} maskUnits='userSpaceOnUse' x='0' y='5' width='16' height='7'>
           <rect x='15.1428' y='5.01587' width='6.34921' height='14.2857' transform='rotate(90 15.1428 5.01587)' fill='black' />
         </mask>
