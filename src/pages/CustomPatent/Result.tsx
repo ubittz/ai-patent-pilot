@@ -74,9 +74,7 @@ function CustomPatentReesult() {
             <Button.Large onClick={toggle}>특허 검토 요청</Button.Large>
             <StyledDescriptionBox gap={8}>
               <Typography.Header5 color={COLORS.SUB_TEXT}>특허 검토 요청이란?</Typography.Header5>
-              <Typography.Header6 color='#999999'>
-                검토 요청 시 회원님의 선택 사항을 토대로 전문가 검증을 거쳐 결과를 알려드립니다.
-              </Typography.Header6>
+              <Typography.Header6 color='#999999'>검토 요청 시 전문가가 추가로 검토하여 결과를 알려드립니다.</Typography.Header6>
             </StyledDescriptionBox>
           </Flex.Vertical>
         </Flex.Vertical>
