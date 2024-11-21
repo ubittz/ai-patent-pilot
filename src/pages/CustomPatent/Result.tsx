@@ -12,6 +12,7 @@ import { DownArrowPointIcon } from '@@constants/icons';
 import { useToggle } from '@@hooks/common';
 import { PAGES } from '@@router/constants';
 import { pathGenerator } from '@@router/utils';
+import { useAppState } from '@@store/hooks';
 
 const StyledDescriptionBox = styled(Flex.Vertical)`
   padding: 16px 12px;
@@ -22,6 +23,8 @@ const StyledDescriptionBox = styled(Flex.Vertical)`
 
 function CustomPatentReesult() {
   const navigate = useNavigate();
+
+  const me = useAppState((state) => state.home.me);
 
   const [visible, toggle] = useToggle();
 
@@ -46,7 +49,7 @@ function CustomPatentReesult() {
       <Flex.Vertical className='body tw-pt-[40px] tw-px-[30px]' gap={34}>
         <Flex.Vertical gap={24}>
           <Typography.Header2>
-            김진수님께
+            {me.name}님께
             <br />
             추천드리는 특허는
             <br />

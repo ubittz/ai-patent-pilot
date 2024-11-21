@@ -86,7 +86,7 @@ export const serviceDescriptionTitleGenerator = (name: string, { category }: Ser
     case SERVICE_CATEGORY.FIND_PATENT:
       return (
         <>
-          {name}께서
+          {name}님께서
           <br />
           찾으시는 특허권의
           <br />
@@ -96,7 +96,7 @@ export const serviceDescriptionTitleGenerator = (name: string, { category }: Ser
     case SERVICE_CATEGORY.CUSTOM_PATENT:
       return (
         <>
-          {name}께
+          {name}님께
           <br />
           추천드리는 특허는
           <br />
