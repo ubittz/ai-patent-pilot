@@ -39,7 +39,7 @@ function CustomPatent() {
             <>
               만들고 싶은 특허 관련 정보를
               <br />
-              선택해주세요.
+              입력해주세요.
             </>
           }
           values={values}
@@ -51,7 +51,7 @@ function CustomPatent() {
       path: '/keyword',
       element: (
         <PatentInputPage
-          title='만들고 싶은 특허 관련 정보를\n선택해주세요.'
+          title='만들고 싶은 특허 관련 정보를\n입력해주세요.'
           inputFormGroupProps={{
             label: '핵심키워드',
             inputProps: {
@@ -67,7 +67,7 @@ function CustomPatent() {
       path: '/content',
       element: (
         <PatentInputPage
-          title='만들고 싶은 특허 관련 정보를\n선택해주세요.'
+          title='만들고 싶은 특허 관련 정보를\n입력해주세요.'
           inputFormGroupProps={{
             label: '기술 내용',
             inputProps: {
